@@ -1,3 +1,1 @@
-# React-Tailwind-Side-Menu
-
-![Template Image](./src/assets/Template.png)
+## Live Link -- https://lighthearted-lily-2b534d.netlify.app/

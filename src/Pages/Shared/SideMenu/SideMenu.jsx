@@ -30,11 +30,11 @@ const SideMenu = () => {
         };
     }, []);
 
-    const active = 'flex gap-3.5 items-center text-sm font-medium py-3 px-4 rounded-md bg-gray-100 duration-200 text-blue-600 group';
-    const notActive = 'flex gap-3.5 items-center text-sm font-medium py-3 px-4 rounded-md hover:bg-blue-700 duration-200 group';
+    const active = 'flex gap-3.5 items-center text-sm font-medium py-3 px-4 rounded-md bg-indigo-700 duration-100 group relative';
+    const notActive = 'flex gap-3.5 items-center text-sm font-medium py-3 px-4 rounded-md hover:bg-indigo-800 duration-100 group relative';
 
     return (
-        <section className={`bg-gradient-to-l from-blue-500 to-blue-800 text-gray-100 h-screen ${open ? 'w-60' : 'w-16'} duration-500`}>
+        <section className={`bg-gradient-to-r from-indigo-800 to-indigo-900 text-gray-100 h-screen ${open ? 'w-60' : 'w-16'} duration-500`}>
             <article className="flex flex-col h-full pb-10">
                 <div className="flex justify-between items-center py-3 px-4 ">
                     <h2 className={`whitespace-pre duration-500 ${!open && 'opacity-0 -translate-x-20 overflow-hidden'}  delay-0 tracking-[5px] text-2xl`} >Side Menu</h2>
@@ -98,24 +98,24 @@ const SideMenu = () => {
                         </Link>)
                     }
                     {
-                        !false && (<Link to={'/signUp'}
+                        !false && (<button
                             className={notActive}>
                             <div>{React.createElement(AiOutlineLogout, { size: '20' })}</div>
                             <span className={`whitespace-pre duration-500 ${!open && 'opacity-0 translate-x-28 overflow-hidden'}  delay-200`}>Sign Up</span>
                             <p
                                 className={`${open && 'hidden'} absolute left-40 text-sm font-medium whitespace-pre text-blue-600 bg-white shadow-xl rounded-md group-hover:px-4 group-hover:py-2 w-0 overflow-hidden group-hover:left-16 group-hover:w-fit group-hover:duration-700`}
                             >Sign Up</p>
-                        </Link>)
+                        </button>)
                     }
                     {
-                        true && (<Link
+                        true && (<button
                             className={notActive}>
                             <div>{React.createElement(FiSettings, { size: '20' })}</div>
                             <span className={`whitespace-pre duration-500 ${!open && 'opacity-0 translate-x-28 overflow-hidden'}  delay-300`}>Settings</span>
                             <p
                                 className={`${open && 'hidden'} absolute left-40 text-sm font-medium whitespace-pre text-blue-600 bg-white shadow-xl rounded-md group-hover:px-4 group-hover:py-2 w-0 overflow-hidden group-hover:left-16 group-hover:w-fit group-hover:duration-700`}
                             >Settings</p>
-                        </Link>)
+                        </button>)
                     }
                     {
                         true && (<button
